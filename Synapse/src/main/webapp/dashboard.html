@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Synapse</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🧠 Synapse</h1>
+            </div>
+            <div class="nav-links">
+                <span id="welcomeUser" class="welcome-text"></span>
+                <button onclick="logout()" class="btn btn-outline">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="container">
+            <h1 class="page-title">Your Mental Health Dashboard</h1>
+            
+            <div class="dashboard-grid">
+                <!-- Test Cards -->
+                <div class="test-card">
+                    <div class="test-icon">😔</div>
+                    <h3>Depression Test</h3>
+                    <p>PHQ-9 Assessment</p>
+                    <a href="test-depression.html" class="btn btn-primary">Take Test</a>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-icon">😰</div>
+                    <h3>Anxiety Test</h3>
+                    <p>GAD-7 Assessment</p>
+                    <a href="test-anxiety.html" class="btn btn-primary">Take Test</a>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-icon">😫</div>
+                    <h3>Stress Test</h3>
+                    <p>Perceived Stress Scale</p>
+                    <a href="test-stress.html" class="btn btn-primary">Take Test</a>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-icon">🎭</div>
+                    <h3>Personality Test</h3>
+                    <p>Big Five Traits</p>
+                    <a href="test-personality.html" class="btn btn-primary">Take Test</a>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <h2>Your Latest Results</h2>
+                <div id="latestResults">
+                    <p class="loading">Loading your results...</p>
+                </div>
+            </div>
+            
+            <div class="history-section">
+                <h2>Test History</h2>
+                <div id="testHistory">
+                    <p class="loading">Loading history...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        async function checkAuth() {
+            try {
+                const response = await fetch('login');
+                const data = await response.json();
+                
+                if (!data.loggedIn) {
+                    window.location.href = 'login.html';
+                    return false;
+                }
+                
+                document.getElementById('welcomeUser').textContent = `Welcome, ${data.username}!`;
+                return true;
+            } catch (error) {
+                window.location.href = 'login.html';
+                return false;
+            }
+        }
+        
+        async function loadDashboard() {
+            try {
+                const response = await fetch('dashboard');
+                const data = await response.json();
+                
+                if (data.success) {
+                    displayLatestResults(data.latestResult);
+                    displayHistory(data.allResults);
+                } else {
+                    document.getElementById('latestResults').innerHTML = '<p>No results available yet. Take your first test!</p>';
+                    document.getElementById('testHistory').innerHTML = '<p>No test history available.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+            }
+        }
+        
+        function displayLatestResults(result) {
+            const container = document.getElementById('latestResults');
+            
+            if (!result) {
+                container.innerHTML = '<p>No results available yet. Take your first test!</p>';
+                return;
+            }
+            
+            container.innerHTML = `
+                <div class="result-card">
+                    <div class="result-summary">
+                        <div class="score-item">
+                            <h4>Depression</h4>
+                            <div class="score-badge ${getLevelClass(result.depressionLevel)}">${result.depressionLevel}</div>
+                            <p>Score: ${result.depressionScore}</p>
+                        </div>
+                        <div class="score-item">
+                            <h4>Anxiety</h4>
+                            <div class="score-badge ${getLevelClass(result.anxietyLevel)}">${result.anxietyLevel}</div>
+                            <p>Score: ${result.anxietyScore}</p>
+                        </div>
+                        <div class="score-item">
+                            <h4>Stress</h4>
+                            <div class="score-badge ${getLevelClass(result.stressLevel)}">${result.stressLevel}</div>
+                            <p>Score: ${result.stressScore}</p>
+                        </div>
+                    </div>
+                    <a href="results.html" class="btn btn-primary">View Full Report</a>
+                </div>
+            `;
+        }
+        
+        function displayHistory(results) {
+            const container = document.getElementById('testHistory');
+            
+            if (!results || results.length === 0) {
+                container.innerHTML = '<p>No test history available.</p>';
+                return;
+            }
+            
+            let html = '<div class="history-list">';
+            results.forEach(result => {
+                const date = new Date(result.createdAt).toLocaleDateString();
+                html += `
+                    <div class="history-item">
+                        <span class="history-date">${date}</span>
+                        <span>Depression: ${result.depressionLevel} | Anxiety: ${result.anxietyLevel} | Stress: ${result.stressLevel}</span>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            container.innerHTML = html;
+        }
+        
+        function getLevelClass(level) {
+            if (!level) return '';
+            const lowerLevel = level.toLowerCase();
+            if (lowerLevel.includes('minimal') || lowerLevel.includes('low')) return 'level-low';
+            if (lowerLevel.includes('mild') || lowerLevel.includes('moderate')) return 'level-moderate';
+            return 'level-high';
+        }
+        
+        async function logout() {
+            try {
+                await fetch('logout', { method: 'POST' });
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+        }
+        
+        // Initialize
+        checkAuth().then(isAuth => {
+            if (isAuth) loadDashboard();
+        });
+    </script>
+</body>
+</html>

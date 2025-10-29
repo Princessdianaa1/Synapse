@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test - Synapse</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="dashboard.html"><h1>🧠 Synapse</h1></a>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="test-container">
+        <div class="container">
+            <h1 class="test-title">Big Five Personality Test</h1>
+            <p class="test-description">
+                Rate how much you agree with each statement about yourself.
+            </p>
+            
+            <form id="personalityForm" class="test-form">
+                <!-- Openness Questions -->
+                <h3 class="trait-heading">Openness to Experience</h3>
+                
+                <div class="question-block">
+                    <p class="question">1. I have a vivid imagination</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q1" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q1" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q1" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q1" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q1" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">2. I enjoy trying new things</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q2" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q2" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q2" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q2" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q2" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">3. I am curious about many things</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q3" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q3" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q3" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q3" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q3" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">4. I appreciate art and beauty</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q4" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q4" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q4" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q4" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q4" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">5. I prefer variety to routine</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q5" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q5" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q5" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q5" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q5" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">6. I am interested in abstract ideas</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q6" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q6" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q6" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q6" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q6" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">7. I have excellent ideas</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q7" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q7" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q7" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q7" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q7" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">8. I enjoy thinking about complex problems</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q8" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q8" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q8" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q8" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q8" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">9. I am quick to understand things</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q9" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q9" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q9" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q9" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q9" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">10. I spend time reflecting on things</p>
+                    <div class="options">
+                        <label><input type="radio" name="openness_q10" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="openness_q10" value="2"> Disagree</label>
+                        <label><input type="radio" name="openness_q10" value="3"> Neutral</label>
+                        <label><input type="radio" name="openness_q10" value="4"> Agree</label>
+                        <label><input type="radio" name="openness_q10" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+
+                <!-- Conscientiousness Questions -->
+                <h3 class="trait-heading">Conscientiousness</h3>
+                
+                <div class="question-block">
+                    <p class="question">11. I am always prepared</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q1" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q1" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q1" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q1" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q1" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">12. I pay attention to details</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q2" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q2" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q2" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q2" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q2" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">13. I get chores done right away</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q3" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q3" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q3" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q3" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q3" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">14. I like order and organization</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q4" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q4" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q4" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q4" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q4" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">15. I follow a schedule</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q5" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q5" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q5" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q5" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q5" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">16. I am exacting in my work</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q6" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q6" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q6" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q6" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q6" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">17. I am reliable</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q7" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q7" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q7" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q7" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q7" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">18. I complete tasks successfully</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q8" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q8" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q8" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q8" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q8" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">19. I make plans and stick to them</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q9" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q9" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q9" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q9" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q9" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">20. I am persistent in achieving goals</p>
+                    <div class="options">
+                        <label><input type="radio" name="conscientiousness_q10" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q10" value="2"> Disagree</label>
+                        <label><input type="radio" name="conscientiousness_q10" value="3"> Neutral</label>
+                        <label><input type="radio" name="conscientiousness_q10" value="4"> Agree</label>
+                        <label><input type="radio" name="conscientiousness_q10" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+
+                <!-- Extraversion Questions -->
+                <h3 class="trait-heading">Extraversion</h3>
+                
+                <div class="question-block">
+                    <p class="question">21. I am the life of the party</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q1" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q1" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q1" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q1" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q1" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">22. I talk to a lot of different people</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q2" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q2" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q2" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q2" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q2" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">23. I feel comfortable around people</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q3" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q3" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q3" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q3" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q3" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">24. I start conversations</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q4" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q4" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q4" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q4" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q4" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">25. I have a lot of fun</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q5" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q5" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q5" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q5" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q5" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">26. I make friends easily</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q6" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q6" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q6" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q6" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q6" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">27. I am full of energy</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q7" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q7" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q7" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q7" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q7" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">28. I enjoy being the center of attention</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q8" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q8" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q8" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q8" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q8" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">29. I am outgoing and sociable</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q9" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q9" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q9" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q9" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q9" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">30. I am talkative</p>
+                    <div class="options">
+                        <label><input type="radio" name="extraversion_q10" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="extraversion_q10" value="2"> Disagree</label>
+                        <label><input type="radio" name="extraversion_q10" value="3"> Neutral</label>
+                        <label><input type="radio" name="extraversion_q10" value="4"> Agree</label>
+                        <label><input type="radio" name="extraversion_q10" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+
+                <!-- Agreeableness Questions -->
+                <h3 class="trait-heading">Agreeableness</h3>
+                
+                <div class="question-block">
+                    <p class="question">31. I am interested in people</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q1" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q1" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q1" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q1" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q1" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">32. I sympathize with others' feelings</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q2" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q2" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q2" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q2" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q2" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">33. I have a soft heart</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q3" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q3" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q3" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q3" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q3" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">34. I take time out for others</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q4" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q4" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q4" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q4" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q4" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">35. I feel others' emotions</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q5" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q5" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q5" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q5" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q5" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">36. I am kind to everyone</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q6" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q6" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q6" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q6" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q6" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">37. I trust others</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q7" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q7" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q7" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q7" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q7" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">38. I cooperate with others</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q8" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q8" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q8" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q8" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q8" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">39. I am respectful of others</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q9" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q9" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q9" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q9" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q9" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">40. I help others</p>
+                    <div class="options">
+                        <label><input type="radio" name="agreeableness_q10" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="agreeableness_q10" value="2"> Disagree</label>
+                        <label><input type="radio" name="agreeableness_q10" value="3"> Neutral</label>
+                        <label><input type="radio" name="agreeableness_q10" value="4"> Agree</label>
+                        <label><input type="radio" name="agreeableness_q10" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+
+                <!-- Neuroticism Questions -->
+                <h3 class="trait-heading">Neuroticism (Emotional Stability)</h3>
+                
+                <div class="question-block">
+                    <p class="question">41. I get stressed out easily</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q1" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q1" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q1" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q1" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q1" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">42. I worry about things</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q2" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q2" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q2" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q2" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q2" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">43. I am easily disturbed</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q3" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q3" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q3" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q3" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q3" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">44. I get upset easily</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q4" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q4" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q4" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q4" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q4" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">45. I change my mood a lot</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q5" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q5" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q5" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q5" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q5" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">46. I have frequent mood swings</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q6" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q6" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q6" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q6" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q6" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">47. I get irritated easily</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q7" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q7" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q7" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q7" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q7" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">48. I often feel blue</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q8" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q8" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q8" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q8" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q8" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">49. I am anxious</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q9" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q9" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q9" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q9" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q9" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question">50. I panic easily</p>
+                    <div class="options">
+                        <label><input type="radio" name="neuroticism_q10" value="1" required> Strongly Disagree</label>
+                        <label><input type="radio" name="neuroticism_q10" value="2"> Disagree</label>
+                        <label><input type="radio" name="neuroticism_q10" value="3"> Neutral</label>
+                        <label><input type="radio" name="neuroticism_q10" value="4"> Agree</label>
+                        <label><input type="radio" name="neuroticism_q10" value="5"> Strongly Agree</label>
+                    </div>
+                </div>
+                
+                <div id="message" class="message"></div>
+                
+                <button type="submit" class="btn btn-primary btn-large">Complete All Tests & Get Results</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        checkAuthRedirect();
+        
+        document.getElementById('personalityForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const messageDiv = document.getElementById('message');
+            
+            try {
+                // First submit personality test
+                const response = await fetch('test/personality', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    messageDiv.className = 'message success';
+                    messageDiv.textContent = 'All tests completed! Generating your comprehensive analysis...';
+                    
+                    // Now trigger complete analysis
+                    setTimeout(async () => {
+                        const completeResponse = await fetch('test/complete', {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        const completeData = await completeResponse.json();
+                        
+                        if (completeData.success) {
+                            window.location.href = 'results.html';
+                        } else {
+                            messageDiv.className = 'message error';
+                            messageDiv.textContent = 'Error generating analysis. Please try again.';
+                        }
+                    }, 1000);
+                } else {
+                    messageDiv.className = 'message error';
+                    messageDiv.textContent = data.message || 'Failed to submit test';
+                }
+            } catch (error) {
+                messageDiv.className = 'message error';
+                messageDiv.textContent = 'Network error. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>
